@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Bozman | CISO & VP of Cybersecurity</title>
+    <meta name="description" content="Executive portfolio of Michael Bozman - Chief Information Security Officer, VP of Cybersecurity, and Head of Enterprise GRC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: #111827;
+            --bg-card-hover: #1f2937;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-glow: rgba(6, 182, 212, 0.15);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+            --border-highlight: #374151;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 96px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .nav-logo span {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08) 0%, rgba(9, 13, 22, 0) 70%);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            color: var(--accent-cyan);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-family: var(--font-mono);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: #090d16;
+        }
+
+        .btn-primary:hover {
+            background: #22d3ee;
+            color: #090d16;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-highlight);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-cyan);
+        }
+
+        /* Section Typography */
+        .section-header {
+            margin-bottom: 64px;
+        }
+
+        .section-subtitle {
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* Value Proposition Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-glow);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .timeline-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .timeline-role {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .timeline-org {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .timeline-date {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        .timeline-body ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .timeline-body li {
+            position: relative;
+            padding-left: 24px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .timeline-body li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        /* Metrics / Impact Section */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(17, 24, 39, 0.6) 100%);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+        }
+
+        .metric-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* Contact & Footer */
+        .footer {
+            padding: 64px 0;
+            background: #05080f;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            section { padding: 64px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">MICHAEL <span>BOZMAN</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#value">Executive Value</a></li>
+                <li><a href="#toolkit">Capabilities</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="badge">CHIEF INFORMATION SECURITY OFFICER | VP OF CYBERSECURITY</div>
+            <h1>Strategic Cyber Leadership.<br>Enterprise-Grade Defense.</h1>
+            <div class="hero-title">Head of Enterprise GRC & Cyber Operations Specialist</div>
+            <p class="hero-description">
+                Cyber Executive and Command Sergeant Major with over 20 years of progressive leadership spanning offensive and defensive cyber operations, joint force generation, and enterprise risk management. Proven record governing large-scale defense organizations of up to 320+ personnel across multi-domain and critical operational technology (OT) environments.
+            </p>
+            <div class="hero-cta">
+                <a href="https://linkedin.com/in/michael-bozman-53594294" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                <a href="#experience" class="btn btn-secondary">Explore Leadership Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics / Impact -->
+    <section>
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">20+</div>
+                    <div class="metric-label">Years Cyber & Defense Leadership</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">320+</div>
+                    <div class="metric-label">Enterprise Personnel Governed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">$2M+</div>
+                    <div class="metric-label">Training Cost Optimization</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">24/7/365</div>
+                    <div class="metric-label">QRF Emergency Response Execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Value Proposition -->
+    <section id="value">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// WHAT I BRING TO ORGANIZATIONS</div>
+                <h2 class="section-title">Executive Value Proposition</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">01</div>
+                    <h3>C-Suite Strategy & Governance</h3>
+                    <p>Aligning cybersecurity posture directly with operational objectives, managing multi-million-dollar budgets, and enforcing robust GRC and Zero Trust frameworks across high-stakes infrastructure.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">02</div>
+                    <h3>Multi-Domain Defense & OT Security</h3>
+                    <p>Leading transformation toward Operational Technology (OT) resilience, non-traditional IP network defense, and managing 24/7/365 Quick Reaction Forces for critical operations.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">03</div>
+                    <h3>Workforce Capability Engineering</h3>
+                    <p>Designing joint curriculum standards and advanced training architectures that resolve enterprise-wide readiness shortfalls while delivering multi-million-dollar cost savings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies & Toolkit -->
+    <section id="toolkit">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// CORE COMPETENCIES</div>
+                <h2 class="section-title">Executive Cyber Toolkit</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Strategic Leadership & Governance</h3>
+                    <p>Enterprise Cyber Governance (GRC) • Executive Advisory & C-Suite Reporting • Risk Management Framework (RMF) • Multi-Million Dollar Budget Optimization • Threat Intelligence Integration</p>
+                </div>
+                <div class="card">
+                    <h3>Technical & Operational Mastery</h3>
+                    <p>Defensive Cyber Operations (DCO) • Offensive Cyber Operations (OCO) • Operational Technology (OT) Security • Zero Trust Architecture • Technical Access & Target Exploitation</p>
+                </div>
+                <div class="card">
+                    <h3>Enterprise Operations & Force Generation</h3>
+                    <p>Joint Force Generation (CYFORGEN) • Incident Response & Crisis Management • Talent Acquisition & Retention • Curriculum & Program Architecture • Multi-Component Integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// CAREER HISTORY</div>
+                <h2 class="section-title">Professional Leadership Experience</h2>
+            </div>
+            <div class="timeline">
+
+                <!-- Role 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Chief Information Security Officer (CISO) / Senior Director of Cyber Operations</div>
+                            <div class="timeline-org">U.S. Army Cyber Protection Brigade (1st Cyber Protection Battalion) | Evans, GA</div>
+                        </div>
+                        <div class="timeline-date">May 2025 – Present</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Directs Defensive Cyber Operations (DCO) for a 321-person enterprise across DOWIN, USSOUTHCOM, USNORTHCOM, and INDOPACOM operational theaters.</li>
+                            <li>Spearheads organizational transformation toward an Operational Technology (OT) Battalion, establishing defense capabilities across critical infrastructure networks.</li>
+                            <li>Directs 24/7/365 Quick Reaction Force (QRF) emergency response teams and oversees readiness and deployment of 9 Cyber Protection Teams (CPTs).</li>
+                            <li>Architected NCO Development Pipeline initiatives and manages cross-component integration for Army Reserve Cyber Protection Teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Vice President of Cyber Capability & Workforce Development</div>
+                            <div class="timeline-org">U.S. Army Cyber Center of Excellence | Fort Eisenhower, GA</div>
+                        </div>
+                        <div class="timeline-date">August 2022 – May 2025</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Directed individual training plan development and workforce strategy across the entire Cyber Operations Career Management Field (CMF 17).</li>
+                            <li>Engineered the Advanced Cyber Operations Course-Academics (AOC-A), resolving USCYBERCOM's #1 training readiness issue and achieving multi-million-dollar cost savings.</li>
+                            <li>Designed the Advanced Cyber Operations Course-Procedures (AOC-P), establishing joint TTP standards for Title 10 effects-based cyberspace operations across all US Military services.</li>
+                            <li>Executive advisor to 142 personnel; led emergency response during Hurricane Helene, ensuring 100% personnel safety and zero training delays.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Director of Enterprise Cyber Readiness & Tactics</div>
+                            <div class="timeline-org">U.S. Army Cyber Command (ARCYBER) G3 | Fort Gordon, GA</div>
+                        </div>
+                        <div class="timeline-date">October 2019 – August 2022</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Served as Chief Offensive Cyber Operations (OCO) and Training Advisor, directing Cyber Force Generation (CYFORGEN) across an enterprise of 750+ personnel.</li>
+                            <li>Overhauled and instructed the Army Cyber Operator (ACO) course, certifying 25+ operators and saving over $2,000,000 in external training costs.</li>
+                            <li>Provided operational training oversight across ARCYBER networks, US Special Forces, and 75th Ranger Regiment cyber tactical teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Senior Director of Global Threat Operations & Cyber Mission Teams</div>
+                            <div class="timeline-org">782nd Military Intelligence Battalion (Cyber) | Fort Gordon, GA</div>
+                        </div>
+                        <div class="timeline-date">March 2018 – October 2019</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>First Sergeant for Charlie Company, managing health, readiness, and tactical execution for 94+ cyber operators, analysts, and civilians across Combat Mission Teams (CMT) and Combat Support Teams (CST).</li>
+                            <li>Supervised 60+ high-visibility offensive cyberspace operations and provided governance for 200+ cyberspace operations supporting Global Combatant Commands.</li>
+                            <li>Built training infrastructure across 13 technical work roles, leading teams through successful USCYBERCOM validation exercises.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Senior Manager of Offensive Cyber Operations & Intelligence</div>
+                            <div class="timeline-org">Joint Mission Operations Center (JMOC) / 780th & 782nd MI Battalions</div>
+                        </div>
+                        <div class="timeline-date">August 2011 – March 2018</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Operations NCOIC for JMOC-Georgia, coordinating joint tactical cyberspace operations across 6 mission centers for U.S. Cyber Command.</li>
+                            <li>Led Computer Network Exploitation (CNE) platoons and Combat Mission Teams in target access and exploitation solutions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-role">Senior Signals Intelligence & Threat Analyst</div>
+                            <div class="timeline-org">National Security Agency (NSA) / INSCOM</div>
+                        </div>
+                        <div class="timeline-date">June 2003 – August 2011</div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Managed mission operations for NSA/CSS SIGINT cells supporting theater combatant commanders during Operation Enduring Freedom.</li>
+                            <li>Mobile Training Team Instructor delivering instruction in data manipulation, target development, and database access.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Certifications & Honors -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// CREDENTIALS</div>
+                <h2 class="section-title">Education, Certifications & Key Honors</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Higher Education</h3>
+                    <p><strong>Bachelor of Applied Science (B.A.S.)</strong><br>Computer Systems Networking & Telecommunications<br><span style="color: var(--text-muted);">University of Maryland Global Campus (2021 – 2024)</span></p>
+                </div>
+                <div class="card">
+                    <h3>Military Technical Education</h3>
+                    <p>• <strong>Joint Cyber Analysis Course (JCAC)</strong> – Honor Graduate (GPA: 94.9)<br>
+                    • <strong>Military Intelligence Senior Leader Course (SLC)</strong> – Commandant's List<br>
+                    • <strong>SIGINT Analyst Advanced Leader Course (ALC)</strong> – Superior Ratings</p>
+                </div>
+                <div class="card">
+                    <h3>Military Honors & Decorations</h3>
+                    <p>• Meritorious Service Medal (MSM) (Multiple Awards)<br>
+                    • Joint Service Commendation Medal (JSCM)<br>
+                    • Army Commendation Medal (ARCOM) (Multiple Awards)<br>
+                    • Joint Service Achievement Medal (JSAM)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="section-subtitle">// CONTACT</div>
+            <h2 class="section-title" style="margin-bottom: 24px;">Connect with Michael Bozman</h2>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/michael-bozman-53594294" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
+            </div>
+            <p>© 2026 Michael Bozman. Built for GitHub Pages deployment.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
