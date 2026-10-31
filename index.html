@@ -7,7 +7,7 @@
     <meta name="description" content="Executive portfolio of Michael Bozman - Chief Information Security Officer, VP of Cybersecurity, and Head of Enterprise GRC.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -46,7 +46,7 @@
         a {
             color: var(--accent-cyan);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         a:hover {
@@ -115,7 +115,21 @@
         .hero {
             padding-top: 160px;
             padding-bottom: 100px;
-            background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08) 0%, rgba(9, 13, 22, 0) 70%);
+            background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.12) 0%, rgba(9, 13, 22, 0) 70%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
 
         .badge {
@@ -129,12 +143,17 @@
             border-radius: 9999px;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 24px;
             font-family: var(--font-mono);
         }
 
+        .badge-clearance {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: var(--accent-blue);
+        }
+
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.03em;
@@ -142,17 +161,16 @@
         }
 
         .hero-title {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             color: var(--accent-cyan);
             font-weight: 600;
             margin-bottom: 24px;
         }
 
         .hero-description {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 800px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .hero-cta {
@@ -161,6 +179,54 @@
             flex-wrap: wrap;
         }
 
+        /* Hero Image/Card Placeholder */
+        .hero-media-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-highlight);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            border: 4px solid var(--bg-dark);
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
+        }
+
+        .hero-media-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .hero-media-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -216,7 +282,7 @@
             letter-spacing: -0.02em;
         }
 
-        /* Value Proposition Grid */
+        /* Grids & Cards */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -248,6 +314,7 @@
             color: var(--accent-cyan);
             margin-bottom: 20px;
             font-weight: 700;
+            font-family: var(--font-mono);
         }
 
         .card h3 {
@@ -257,6 +324,47 @@
         }
 
         .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Executive Philosophy Blockquote */
+        .philosophy-container {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.9) 0%, rgba(9, 13, 22, 0.95) 100%);
+            border: 1px solid var(--accent-cyan);
+            border-radius: 16px;
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--accent-cyan);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .philosophy-item h4 {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .philosophy-item p {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
@@ -328,6 +436,34 @@
             color: var(--accent-cyan);
         }
 
+        /* Theater Coverage Grid */
+        .theater-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .theater-card {
+            background: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-family: var(--font-mono);
+        }
+
+        .theater-card h4 {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .theater-card p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
         /* Metrics / Impact Section */
         .metrics-grid {
             display: grid;
@@ -371,6 +507,7 @@
             justify-content: center;
             gap: 24px;
             margin-bottom: 24px;
+            flex-wrap: wrap;
         }
 
         .footer p {
@@ -378,7 +515,8 @@
             font-size: 0.85rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
             section { padding: 64px 0; }
@@ -393,27 +531,40 @@
             <a href="#" class="nav-logo">MICHAEL <span>BOZMAN</span></a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Leadership</a></li>
                 <li><a href="#value">Executive Value</a></li>
-                <li><a href="#toolkit">Capabilities</a></li>
+                <li><a href="#readiness">C-Suite Resources</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Headshot & Clearance -->
     <section class="hero" id="about">
         <div class="container">
-            <div class="badge">CHIEF INFORMATION SECURITY OFFICER | VP OF CYBERSECURITY</div>
-            <h1>Strategic Cyber Leadership.<br>Enterprise-Grade Defense.</h1>
-            <div class="hero-title">Head of Enterprise GRC & Cyber Operations Specialist</div>
-            <p class="hero-description">
-                Cyber Executive and Command Sergeant Major with over 20 years of progressive leadership spanning offensive and defensive cyber operations, joint force generation, and enterprise risk management. Proven record governing large-scale defense organizations of up to 320+ personnel across multi-domain and critical operational technology (OT) environments.
-            </p>
-            <div class="hero-cta">
-                <a href="https://linkedin.com/in/michael-bozman-53594294" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
-                <a href="#experience" class="btn btn-secondary">Explore Leadership Experience</a>
+            <div class="hero-grid">
+                <div>
+                    <div class="badge-group">
+                        <div class="badge">CISO | VP OF CYBERSECURITY</div>
+                        <div class="badge badge-clearance">TOP SECRET / SCI CLEARED</div>
+                    </div>
+                    <h1>Strategic Cyber Leadership.<br>Enterprise-Grade Defense.</h1>
+                    <div class="hero-title">Head of Enterprise GRC & Cyber Operations Specialist</div>
+                    <p class="hero-description">
+                        Cyber Executive and Command Sergeant Major with over 20 years of progressive leadership spanning offensive and defensive cyber operations, joint force generation, and enterprise risk management. Trusted advisor governing high-visibility defense organizations of up to 320+ personnel across multi-domain and critical operational technology (OT) environments.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://linkedin.com/in/michael-bozman-53594294" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                        <a href="#readiness" class="btn btn-secondary">Executive Resources</a>
+                    </div>
+                </div>
+                <div class="hero-media-card">
+                    <div class="profile-avatar">MB</div>
+                    <h3>Michael Bozman</h3>
+                    <p>Chief Information Security Officer</p>
+                    <p style="margin-top: 12px;"><span class="status-dot"></span>Available for C-Suite Advisory & Leadership</p>
+                </div>
             </div>
         </div>
     </section>
@@ -442,6 +593,36 @@
         </div>
     </section>
 
+    <!-- Executive Philosophy Section -->
+    <section id="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// OPERATIONAL PHILOSOPHY</div>
+                <h2 class="section-title">Strategic Leadership Principles</h2>
+            </div>
+            <div class="philosophy-container">
+                <h3 style="font-size: 1.5rem; margin-bottom: 12px;">"Cyber Resilience is Business Enabling, Not a Cost Center."</h3>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">
+                    Modern enterprise protection requires shifting cybersecurity from passive compliance to proactive, mission-aligned operational resilience.
+                </p>
+                <div class="philosophy-grid">
+                    <div class="philosophy-item">
+                        <h4><span>01.</span> Boardroom Risk Quantization</h4>
+                        <p>Translating complex technical cyber risks into clear financial and operational metrics for C-suite decision-makers and board members.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h4><span>02.</span> Zero Trust Architecture</h4>
+                        <p>Embedding Zero Trust paradigms across traditional IT, non-traditional IP networks, and mission-critical Operational Technology (OT).</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h4><span>03.</span> Workforce Capability Architecture</h4>
+                        <p>Developing standardized talent pipelines and rigorous operational standards that retain top-tier talent while optimizing operational budgets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Executive Value Proposition -->
     <section id="value">
         <div class="container">
@@ -464,6 +645,56 @@
                     <div class="card-icon">03</div>
                     <h3>Workforce Capability Engineering</h3>
                     <p>Designing joint curriculum standards and advanced training architectures that resolve enterprise-wide readiness shortfalls while delivering multi-million-dollar cost savings.</p>
+                </div>
+            </div>
+
+            <!-- Global Theater Oversight -->
+            <div style="margin-top: 64px;">
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 16px;">Global Enterprise & Theater Oversight</h3>
+                <div class="theater-grid">
+                    <div class="theater-card">
+                        <h4>USSOUTHCOM</h4>
+                        <p>Southern Command Defense</p>
+                    </div>
+                    <div class="theater-card">
+                        <h4>USNORTHCOM</h4>
+                        <p>Northern Command Defense</p>
+                    </div>
+                    <div class="theater-card">
+                        <h4>INDOPACOM</h4>
+                        <p>Indo-Pacific Theater</p>
+                    </div>
+                    <div class="theater-card">
+                        <h4>DOWIN</h4>
+                        <p>Dept of War Info Network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boardroom & C-Suite Readiness Section -->
+    <section id="readiness">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">// EXECUTIVE TOOLKIT & DELIVERABLES</div>
+                <h2 class="section-title">Boardroom & C-Suite Resources</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Executive Resume</h3>
+                    <p style="margin-bottom: 20px;">Detailed career history, leadership record, and operational accomplishments.</p>
+                    <a href="#" onclick="alert('Connect on LinkedIn or request PDF via email.'); return false;" class="btn btn-secondary" style="width: 100%;">Request Full Resume (PDF)</a>
+                </div>
+                <div class="card">
+                    <h3>CISO First 90-Day Plan</h3>
+                    <p style="margin-bottom: 20px;">Strategic framework for initial risk discovery, stakeholder alignment, and maturity benchmarking.</p>
+                    <a href="#" onclick="alert('Available upon executive request.'); return false;" class="btn btn-secondary" style="width: 100%;">View Plan Summary</a>
+                </div>
+                <div class="card">
+                    <h3>OT & GRC Case Study</h3>
+                    <p style="margin-bottom: 20px;">Overview of training architecture and OT transformation resulting in $2M+ operational savings.</p>
+                    <a href="#" onclick="alert('Available upon executive request.'); return false;" class="btn btn-secondary" style="width: 100%;">View Case Study</a>
                 </div>
             </div>
         </div>
