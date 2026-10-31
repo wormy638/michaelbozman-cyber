@@ -1,2 +1,2 @@
-# michaelbozman.github.io
-Cyber Executive
+# michaelbozman-cyber
+Cyber Executive Resume
